@@ -18,15 +18,16 @@ $widget_config = array (
       'placement' => $widgetplacement,
     ),
     array (
-      'key' => $key . '_post_manual',
-      'label' => 'Manually insert a post to feature',
-      'name' => 'post_manual',
+      'key' => $key . '_post',
+      'label' => 'Choose a post to feature',
+      'name' => 'post',
       'type' => 'post_object',
       'post_type' => $post_types,
       'allow_null' => 1,
       'multiple' => 1,
       'return_format' => 'object',
       'ui' => 1,
+	  'required' => 1
     ),
     array (
       'key' => $key . '_advanced_details_tab',
