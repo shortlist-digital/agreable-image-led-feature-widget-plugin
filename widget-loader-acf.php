@@ -25,7 +25,18 @@ $widget_config = array (
       'post_type' => $post_types,
       'return_format' => 'object',
       'ui' => 1,
-	  'required' => 1
+    ),
+    array (
+      'key' => $key . '_lists',
+      'label' => 'Or choose a list',
+      'name' => 'lists',
+      'type' => 'post_object',
+      'post_type' => array (
+        0 => 'list',
+      ),
+      'return_format' => 'object',
+	  'instructions' => 'If you select a list, the most recent published post in that list will be featured',
+      'ui' => 1,
     ),
     array (
       'key' => $key . '_advanced_details_tab',
