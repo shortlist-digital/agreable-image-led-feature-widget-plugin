@@ -18,17 +18,18 @@ $widget_config = array (
       'placement' => $widgetplacement,
     ),
     array (
-      'key' => $key . '_post',
-      'label' => 'Choose a post to feature',
-      'name' => 'post',
+      'key' => $key . '_posts',
+      'label' => 'Manually add posts to widget',
+      'name' => 'posts',
       'type' => 'post_object',
       'post_type' => $post_types,
       'return_format' => 'object',
       'ui' => 1,
+	  'multiple' => 1
     ),
     array (
       'key' => $key . '_lists',
-      'label' => 'Or choose a list',
+      'label' => 'Manually add lists to widget',
       'name' => 'lists',
       'type' => 'post_object',
       'post_type' => array (
@@ -37,6 +38,7 @@ $widget_config = array (
       'return_format' => 'object',
 	  'instructions' => 'If you select a list, the most recent published post in that list will be featured',
       'ui' => 1,
+	  'multiple' => 1
     ),
     array (
       'key' => $key . '_advanced_details_tab',
