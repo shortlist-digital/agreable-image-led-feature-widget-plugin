@@ -2,8 +2,7 @@
 
 $key = 'widget_image_led_feature';
 $widgetplacement = self::$config['tab_placement'];
-$post_types = get_post_types( array( 'public' => true ) );
-unset( $post_types["attachment"] );
+$post_types = self::$config['post_types'];
 
 $widget_config = array (
   'key' => $key,
@@ -46,6 +45,17 @@ $widget_config = array (
       'type' => 'tab',
       'placement' => $widgetplacement,
     ),
+	array (
+		'key' => $key . '_limit',
+		'name' => 'limit',
+		'label' => 'Limit',
+		'type' => 'number',
+		'default_value' => 1,
+		'instructions' => 'DO NOT TOUCH, if you can see this, should be hidden',
+		'wrapper' => array(
+			'class' => 'acf-hide',
+		),
+	),
   ),
 );
 
